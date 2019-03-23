@@ -1,7 +1,7 @@
-CC		?= gcc
+CC	?= gcc
 SDIR	= src
 ODIR	= obj
-OUT		= h4x0r
+OUT	= h4x0r
 CFLAGS	:= $(CFLAGS) $(shell pkg-config --cflags ncurses) \
 	-Os -Wall -Wextra -pedantic -std=c11
 LFLAGS	:= $(LFLAGS) $(shell pkg-config --libs ncurses)
