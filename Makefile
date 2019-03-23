@@ -2,8 +2,9 @@ CC		?= gcc
 SDIR	= src
 ODIR	= obj
 OUT		= h4x0r
-CFLAGS	:= $(CFLAGS) -Os -Wall -Wextra -pedantic -std=c11
-LFLAGS	:= $(LFLAGS) -lcurses
+CFLAGS	:= $(CFLAGS) $(shell pkg-config --cflags ncurses) \
+	-Os -Wall -Wextra -pedantic -std=c11
+LFLAGS	:= $(LFLAGS) $(shell pkg-config --libs ncurses)
 
 _OBJS = h4x0r.o
 OBJS = $(patsubst %,$(ODIR)/%,$(_OBJS))
