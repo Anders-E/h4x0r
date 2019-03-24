@@ -1,5 +1,5 @@
-#ifndef HACKERTYPER
-#define HACKERTYPER
+#ifndef H4X0R
+#define H4X0R
 
 #include <stdio.h>
 
