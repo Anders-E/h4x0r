@@ -5,7 +5,8 @@
 
 #define BUFFER_SIZE 256
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 	if (argc < 2) {
 		printf("Ange lite filer yo.\n");
 		return 0;
@@ -18,7 +19,8 @@ int main(int argc, char *argv[]) {
 	return 0;
 }
 
-void hackertype(char *filename) {
+void hackertype(char *filename)
+{
 	int x, y;
 	FILE *file = fopen(filename, "r");
 	char buff[BUFFER_SIZE];
@@ -32,12 +34,14 @@ void hackertype(char *filename) {
 	fclose(file);
 }
 
-void type(char *buff, FILE *file) {
+void type(char *buff, FILE *file)
+{
 	fgets(buff, 10, file);
 	printw("%s", buff);
 }
 
-void screen_setup() {
+void screen_setup()
+{
 	initscr();
 	noecho();
 	scrollok(stdscr, 1);
